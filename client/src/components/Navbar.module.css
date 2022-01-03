@@ -1,0 +1,30 @@
+.navbarContainer {
+    position: fixed;
+    height: 45px;
+    width: 100vw;
+    background-color: #D90368;
+    padding: 11px 0px;
+    
+}
+
+
+
+.link {
+    background-color: #2E294E;
+    padding: 5px 10px;
+    color: #FFD400;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0px 10px;
+    border-radius: 4px;
+}
+
+.linkActive {
+    background-color: #2E294E;
+    padding: 5px 10px;
+    color: #64cec8;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0px 10px;
+    border-radius: 4px;
+}

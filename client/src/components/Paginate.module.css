@@ -1,0 +1,31 @@
+.paginateContainer {
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: #2E294E;
+    margin-top: 30px;
+    height: 50px;
+    width: 100vw;
+}
+
+.paginateButton {
+    background-color: #FFD400;
+    border:none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.paginatePrevLast {
+    background-color: #D90368;
+    border: none;
+    border-radius: 5px;
+    color: #FFD400;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 10px 20px;
+}
+

@@ -1,0 +1,72 @@
+.detailCardContainer {
+    position: relative;
+    background-color: #2E294E;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    padding: 40px 0px;
+    top: 80px;
+    margin: 0px 650px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px #820263 ;
+}
+.detailCardImage {
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+    border: 3px dashed #D90368;
+    border-radius: 25px;
+    background-color: #820263;
+}
+
+.detailCardName {
+    color: #EADEDA;
+    background-color: #820263;
+    text-shadow: 3px 3px 5px #820263  ;
+    font-size: 4rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    border-top: 5px solid #FFD400;
+    border-bottom: 5px solid #FFD400;
+    margin-bottom: 20px;
+    font-style: italic;
+    animation-name: detailCardName;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+
+.detailCardTitle {
+    text-shadow: 5px 3px 5px #820263  ;
+    font-size: 3rem;
+    color: #EADEDA;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.detailCardData {
+    margin: 1px;
+    font-size: 1rem;
+    color: #FFD400;
+    font-weight: bold;
+}
+
+.detailCardData span {
+    color: #EADEDA;
+    font-size: 1rem;
+    text-shadow: 2px 2px 5px#820263
+}
+
+@keyframes detailCardName {
+    from{
+        color: #EADEDA;
+        text-shadow: 3px 3px 5px #D90368
+    }
+    to{
+        color: #2E294E;
+        text-shadow: 3px 3px 5px #FFD400
+    }
+}

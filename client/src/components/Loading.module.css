@@ -1,0 +1,113 @@
+.loadingContainer {
+    position: absolute;
+    top: 75vh;
+    background-color: transparent;
+    font-style: italic;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 5px 3px #d90368;   
+    margin-left: 50px;
+}
+
+
+.L-letter {
+    color:red;
+    font-weight: bold;
+    font-size: 8rem;
+}
+.O-letter {
+    color:red;
+    font-weight: bold;
+    font-size: 8rem;
+}
+.A-letter {
+    color:red;
+    font-weight: bold;
+    font-size: 8rem;
+}
+.D-letter {
+    color:red;
+    font-weight: bold;
+    font-size: 8rem; 
+}
+.I-letter {
+    color:red;
+    font-weight: bold;
+    font-size: 8rem; 
+}
+.N-letter {
+    color:red;
+    font-weight: bold;
+    font-size: 8rem;
+}
+.G-letter {
+    color:red;
+    font-weight: bold;
+    font-size: 8rem;
+}
+.first-point {
+    color:red;
+    font-size: 8rem;  
+    animation-name: first-point;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+.second-point {
+    color:red;
+    font-size: 8rem;
+    animation-name: second-point;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-direction: alternate;
+}
+.thrid-point {
+    color:red;
+    font-size: 8rem;
+    animation-name: thrid-point;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-direction: alternate;
+}
+
+@keyframes first-point {
+    from{
+        transform: translate(0px,0px);
+        color: #d90368
+    }
+    to{
+        color: #2E294E;
+        transform: translate(0px,-20px);
+        text-shadow: 1px 1px 1px #FFD400;
+    }
+
+}
+@keyframes second-point {
+    from{
+        transform: translate(0px,0px);
+        color: #d90368
+    }
+    to{
+        color: #2E294E;
+        transform: translate(0px,-20px);
+        text-shadow: 1px 1px 1px #FFD400;
+    }
+
+}
+@keyframes thrid-point {
+    from{
+        transform: translate(0px,0px);
+        color: #d90368
+        
+    }
+    to{
+        color: #2E294E;
+        transform: translate(0px,-20px);
+        text-shadow: 1px 1px 1px #FFD400;
+    }
+
+}

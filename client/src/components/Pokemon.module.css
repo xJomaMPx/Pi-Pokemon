@@ -1,0 +1,92 @@
+.pokemonContainer {
+    position: relative;
+    background-color: #820263;
+    border: 5px solid #FFD400;
+    border-radius: 10px;
+    height: 320px;
+    width: 200px;
+}
+
+.pokemonContainer h3 {
+    position:absolute;
+    top: 135px;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #2e294e;
+    border-bottom: 2px solid #EADEDA;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    z-index: 25;
+    animation-name: title;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.pokemonImage {
+    position: absolute;
+    border-radius: 5px 80px;
+    border-bottom: 5px solid #EADEDA;
+    width: 100%;
+    height: 50%;
+    background-color: #2e294e;
+    animation-name: image;
+    animation-duration:2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.pokemonImage:hover {
+    background-color: #820263
+}
+
+.text {
+    text-decoration: none;
+    color:#EADEDA;
+}
+
+.listTypes {
+    position: relative;
+    top: 200px;
+    list-style: none;
+}
+.types {
+    position: relative;
+    display: block;
+    background-color:#2e294e;
+    width: 100px;
+    height: 30px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 8px -2px 5px 1px #FFD400;
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic; 
+    font-weight: normal;
+}
+
+.types:hover{
+    color: #FFD400
+}
+
+@keyframes title {
+    0% {
+        border-radius: 10px 30px;
+    }
+    100%{
+        border-radius: 30px 10px;
+    }
+}
+
+@keyframes image {
+    0% {
+        
+        border-radius: 5px 80px;
+    }
+    100%{
+        border-radius: 2px 100px;
+    }
+}

@@ -1,0 +1,15 @@
+.msj {
+    background-color: red;
+    display: block;
+    position: relative;
+    width: auto;
+    height: 40px;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0px auto;
+    z-index: -30;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+}

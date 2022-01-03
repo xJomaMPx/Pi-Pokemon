@@ -1,0 +1,11 @@
+.pokemonsContainer {
+    position: relative;
+    display: flex;
+    margin: 100px auto 0px;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 1300px;
+    gap: 20px;
+}

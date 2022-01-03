@@ -1,0 +1,20 @@
+// creamos las constantes con las acciones
+const GET_ALL_POKEMONS = "GER_ALL_POKEMONS";
+const GET_ALL_TYPES = "GET_TYPES";
+const GET_POKEMON_BY_NAME = "GET_BY_NAME_QUERY";
+const GET_POKEMON_BY_ID = "GET_POKEMON_BY_ID";
+const FILTER = "FILTER";
+const POST_FORM = "POST_FORM";
+const ERRORS = 'ERRORS'
+const CLEAR_DATA = "CLEAR_DATA";
+
+export {
+  GET_ALL_POKEMONS,
+  GET_ALL_TYPES,
+  GET_POKEMON_BY_NAME,
+  GET_POKEMON_BY_ID,
+  FILTER,
+  POST_FORM,
+  ERRORS,
+  CLEAR_DATA,
+};

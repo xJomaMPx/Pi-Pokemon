@@ -10,6 +10,12 @@ const server = express();
 
 server.name = 'API';
 
+server.use(function (req, res, next) {
+  console.log("params", req.params)
+  console.log("queryStrings", req.query)
+  next()
+})
+
 server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 server.use(bodyParser.json({ limit: '50mb' }));
 server.use(cookieParser());
@@ -26,9 +32,9 @@ server.use('/', routes);
 
 // Error catching endware.
 server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
+  console.log(err)
   const status = err.status || 500;
   const message = err.message || err;
-  console.error(err);
   res.status(status).send(message);
 });
 
