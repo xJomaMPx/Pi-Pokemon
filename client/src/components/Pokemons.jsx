@@ -6,15 +6,17 @@ const Pokemons = (props) => {
   return (
     <>
       {"pokemonFoundByName" in props ? (
-        <div className={styles.pokemonsContainer}>
-          <Pokemon
-            id={props.pokemonFoundByName.id}
-            name={props.pokemonFoundByName.name}
-            image={props.pokemonFoundByName.image}
-            types={props.pokemonFoundByName.types}
-          />
-          <button onClick={props.clear}>See all again!</button>
-        </div>
+        <>
+          <div className={styles.pokemonsContainer}>
+            <Pokemon
+              id={props.pokemonFoundByName.id}
+              name={props.pokemonFoundByName.name}
+              image={props.pokemonFoundByName.image}
+              types={props.pokemonFoundByName.types}
+            />
+          </div>
+          <button onClick={props.clearByName}>See all Pokemons again!</button>
+        </>
       ) : (
         <div className={styles.pokemonsContainer}>
           {props.pokemonsToShow?.map((pkm) => (

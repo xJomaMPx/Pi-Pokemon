@@ -47,6 +47,8 @@ export const useForm = (initialForm) => {
     if (name === "name") {
       
       if (value.length === 0) setErrors((prevState) => ({ ...prevState, [name]: "Cant be empty" }));
+
+      else if(value.length > 10) setErrors((prevState) => ({ ...prevState,[name]: 'max ten characters'}))
       
       else if (value.includes(" ")) setErrors((prevState) => ({...prevState, [name]: "Cant have spaces",}));
       

@@ -11,7 +11,8 @@ const Types = ({ filteredTypes, chosenTypes, chosenOrigin, filters }) => {
         type="text"
         placeholder="Search types"
         onChange={(e) => filters(e, 'filter-types')}
-      ></input>
+      >
+      </input>
 
       <select className={styles.selectOrigin} name="origin" onChange={(e) => filters(e, "select-origin")}>
         <option value="both">Both</option>

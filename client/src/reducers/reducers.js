@@ -59,7 +59,8 @@ export default function rootReducer(state = initialState, action) {
         if (action.payload.length >= 1) {
           return {
             ...state,
-            filteredTypes: state.allTypes.filter((type) => type.name.startsWith(payloadConvert)
+            filteredTypes: state.allTypes.filter((type) =>
+              type.name.startsWith(payloadConvert)
             ),
           };
         } else {
@@ -93,72 +94,79 @@ export default function rootReducer(state = initialState, action) {
           ...state,
           chosenOrigin: action.payload,
         };
-      } else if (action.info === "filter-pokemons" && state.chosenOrigin === 'both') {
-        return {
-          ...state,
-          filteredPokemons: state.allPokemons.filter((pkm) => {
-            const pkmTypesOrder = pkm.types.sort();
-            const chosenTypesOrder = state.chosenTypes.sort();
-            if (pkmTypesOrder.toString().includes(chosenTypesOrder.toString())) return true;
-            else return false;
-          }),
-        };
-      } else if (action.info === 'filter-pokemons' && state.chosenOrigin === "created") {
-        console.log(state.chosenOrigin)
-        return {
-          ...state,
-          filteredPokemons: state.allPokemons.filter((pkm) => {
-            const pkmTypesOrder = pkm.types.sort();
-            const chosenTypesOrder = state.chosenTypes.sort();
-            if (pkmTypesOrder.toString().includes(chosenTypesOrder.toString()) && isNaN(pkm.id)) return true;
-            else return false;
-          }),
-        };
-      } else if (action.info === 'filter-pokemons' && state.chosenOrigin === "existent") {
-        return {
-          ...state,
-          filteredPokemons: state.allPokemons.filter((pkm) => {
-            const pkmTypesOrder = pkm.types.sort();
-            const chosenTypesOrder = state.chosenTypes.sort();
-            if (pkmTypesOrder.toString().includes(chosenTypesOrder.toString()) && !isNaN(pkm.id)) return true;
-            else return false;
-          }),
-        };
-      } else if (action.info === 'clean-filteredPokemons') {
-        return {
-          ...state,
-          filteredPokemons: []
+      } else if (action.info === "filter-pokemons") {
+        if (state.chosenOrigin === "both") {
+          return {
+            ...state,
+            filteredPokemons: state.allPokemons.filter((pkm) => {
+              const pkmTypesOrder = pkm.types.sort();
+              const chosenTypesOrder = state.chosenTypes.sort();
+              if (pkmTypesOrder.toString().includes(chosenTypesOrder.toString()))
+              return true;
+              else return false;
+            }),
+          };
+        }
+        if (state.chosenOrigin === "created") {
+          return {
+            ...state,
+            filteredPokemons: state.allPokemons.filter((pkm) => {
+              const pkmTypesOrder = pkm.types.sort();
+              const chosenTypesOrder = state.chosenTypes.sort();
+              if (pkmTypesOrder.toString().includes(chosenTypesOrder.toString()) && isNaN(pkm.id))
+              return true;
+              else return false;
+            }),
+          };
+        }
+        if (state.chosenOrigin === "existent") {
+          return {
+            ...state,
+            filteredPokemons: state.allPokemons.filter((pkm) => {
+              const pkmTypesOrder = pkm.types.sort();
+              const chosenTypesOrder = state.chosenTypes.sort();
+              if (pkmTypesOrder.toString().includes(chosenTypesOrder.toString()) &&!isNaN(pkm.id))
+              return true;
+              else return false;
+            }),
+          };
         }
       } else {
         return {
-          ...state
-        }
+          ...state,
+        };
       }
+      break;
 
     ///////////////////////////////////////////////////////////////////////////////
 
     case CLEAR_DATA:
-      if(action.info === 'clear-home') {
+      if (action.info === "clear-home") {
         return {
           ...state,
           pokemonByName: {},
           chosenTypes: [],
-          filteredPokemons: []
-        }
+          filteredPokemons: [],
+        };
       }
-      if(action.info === 'clear-detail') {
+      if (action.info === "clear-detail") {
         return {
           ...state,
-          pokemonById: {}
-        }
+          pokemonById: {},
+        };
       }
-      if(action.info === 'clear-pokemonByName') {
+      if (action.info === "clear-pokemonByName") {
         return {
           ...state,
-          pokemonByName: {}
-        }
+          pokemonByName: {},
+        };
       }
-      
+      if (action.info === "clean-filteredPokemons") {
+        return {
+          ...state,
+          filteredPokemons: [],
+        };
+      }
       return {
         ...state,
         pokemonByName: {},
