@@ -9,3 +9,15 @@
     width: 1300px;
     gap: 20px;
 }
+
+.seeAllAgain {
+    position: absolute;
+    padding: 10px 15px;
+    top: 40vh;
+    border: none;
+    background-color:#820263;
+    border-radius: 3px;
+    color: #eadeda;
+    font-weight: bold;
+    box-shadow: 2px 3px 80px 1px #d90368; 
+}

@@ -14,8 +14,9 @@ const Pokemons = (props) => {
               image={props.pokemonFoundByName.image}
               types={props.pokemonFoundByName.types}
             />
+            <button className={styles.seeAllAgain}onClick={props.clearByName}>See all Pokemons again!</button>
           </div>
-          <button onClick={props.clearByName}>See all Pokemons again!</button>
+          
         </>
       ) : (
         <div className={styles.pokemonsContainer}>

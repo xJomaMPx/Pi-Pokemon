@@ -124,7 +124,7 @@ const Form = () => {
           <input
             type="number"
             name="weight"
-            max="100"
+            max="1000"
             min="1"
             required
             onChange={handleChange}

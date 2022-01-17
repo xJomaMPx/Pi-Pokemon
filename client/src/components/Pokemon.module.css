@@ -5,6 +5,7 @@
     border-radius: 10px;
     height: 320px;
     width: 200px;
+
 }
 
 .pokemonContainer h3 {
@@ -17,7 +18,7 @@
     font-size: 1rem;
     font-weight: bold;
     font-style: italic;
-    z-index: 25;
+    z-index: 20;
     animation-name: title;
     animation-duration: 2s;
     animation-direction: alternate;
@@ -38,7 +39,7 @@
 }
 
 .pokemonImage:hover {
-    background-color: #820263
+    background-color: #EADEDA
 }
 
 .text {
@@ -50,6 +51,7 @@
     position: relative;
     top: 200px;
     list-style: none;
+    font-weight: bold
 }
 .types {
     position: relative;
@@ -66,6 +68,27 @@
     font-size: 1rem;
     font-style: italic; 
     font-weight: normal;
+}
+
+.something {
+    position: absolute;
+    background-color: #FFD400;
+    height: 60px;
+    width: 65px;
+    bottom: 0px;
+    right: 0px;
+    border-top-left-radius: 95%;
+
+}
+.somethingInside{
+    position: absolute;
+    background-color: black;
+    height: 55px;
+    width: 45px;
+    bottom: 0px;
+    right: 0px;
+    border-top-left-radius: 100%;
+
 }
 
 .types:hover{
@@ -90,3 +113,4 @@
         border-radius: 2px 100px;
     }
 }
+

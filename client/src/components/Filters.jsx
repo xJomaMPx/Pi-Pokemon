@@ -31,6 +31,8 @@ const Types = ({ filteredTypes, chosenTypes, chosenOrigin, filters }) => {
           <p className={styles.filteredType} key={i} onClick={(e) => filters(e, "select-types")}>{firstToUpper(type.name)}</p>
         ))}
       </div>
+      {chosenTypes.length > 0 ? <input className={styles.reset} type="button" onClick={(e)=>filters(e, 'filter-reset')} value='Reset'></input>: null}
+
     </div>
   );
 };

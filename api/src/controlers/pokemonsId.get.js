@@ -4,7 +4,7 @@ const { Pokemon, Type } = require("../db");
 const getById = async (req, res, next) => {
   
   const { id } = req.params;
-  console.log(id)
+
 
   if (id.length === 36 && isNaN(id)) {
     const getByIdFromDb = await Pokemon.findByPk(id, { include: Type });

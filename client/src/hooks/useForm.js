@@ -52,7 +52,7 @@ export const useForm = (initialForm) => {
       
       else if (value.includes(" ")) setErrors((prevState) => ({...prevState, [name]: "Cant have spaces",}));
       
-      else if (/[0-9]/.test(value)) setErrors((prevState) => ({...prevState, [name]: "Only letters are allowed",}));
+      else if (!/[AZ-az]/.test(value)) setErrors((prevState) => ({...prevState, [name]: "Only letters are allowed",}));
 
       else if (allPokemons.length !== 0 && errors[name] === undefined) {
         let searchExistence = allPokemons.some(pkm => pkm.name === value)
@@ -74,12 +74,22 @@ export const useForm = (initialForm) => {
       name === "strength" ||
       name === "defense" ||
       name === "speed" ||
-      name === "height" ||
-      name === "weight"
+      name === "height" 
     ) {
       if (value === "") setErrors((prevState) => ({ ...prevState, [name]: "Cant be empty" }));
       
       else if (Number(value) > 100 || Number(value) < 1) setErrors((prevState) => ({...prevState,[name]: "The number must be between 1 and 100",}));
+      
+      else {
+        let errorsCopy = { ...errors };
+        delete errorsCopy[name];
+        setErrors((prevState) => (prevState = errorsCopy));
+      }
+    }
+    if (name === "weight") {
+      if (value === "") setErrors((prevState) => ({ ...prevState, [name]: "Cant be empty" }));
+      
+      else if (Number(value) > 1000 || Number(value) < 1) setErrors((prevState) => ({...prevState,[name]: "The number must be between 1 and 1000",}));
       
       else {
         let errorsCopy = { ...errors };

@@ -6,9 +6,11 @@
     align-items: center;
     gap: 15px;
     background-color: #2E294E;
-    margin-top: 30px;
-    height: 50px;
+   
+    top: 90vh;
+    height: 60px;
     width: 100vw;
+    border-top: 5px solid #D90368;
 }
 
 .paginateButton {

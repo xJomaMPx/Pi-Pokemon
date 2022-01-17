@@ -16,7 +16,7 @@ const getPokemon = async (req, res, next) => {
         attributes: ["id", "name", "image"],
         include: Type,
       });
-      // console.log(getByNameFromDb)
+
 
       if (getByNameFromDb !== null) {
         const resultByNameFromDb = {

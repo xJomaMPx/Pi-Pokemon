@@ -11,6 +11,7 @@ export default function Pokemon({ id, name, image, types }) {
         <ul className={styles.listTypes}>
           {types?.map((type, index) => (<li key={index} className={styles.types}>{type}</li>))}
         </ul>
+        <div className={styles.something}><div className={styles.somethingInside}></div></div>
       </div>
     </Link>
   );

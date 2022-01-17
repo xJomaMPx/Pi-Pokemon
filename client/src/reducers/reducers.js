@@ -125,11 +125,17 @@ export default function rootReducer(state = initialState, action) {
             filteredPokemons: state.allPokemons.filter((pkm) => {
               const pkmTypesOrder = pkm.types.sort();
               const chosenTypesOrder = state.chosenTypes.sort();
-              if (pkmTypesOrder.toString().includes(chosenTypesOrder.toString()) &&!isNaN(pkm.id))
+              if (pkmTypesOrder.toString().includes(chosenTypesOrder.toString()) && typeof pkm.id === 'number')
               return true;
               else return false;
             }),
           };
+        }
+      } else if (action.info === 'filter-reset') {
+        return {
+          ...state,
+          filteredPokemons: [],
+          chosenTypes: []
         }
       } else {
         return {

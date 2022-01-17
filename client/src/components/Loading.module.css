@@ -1,51 +1,88 @@
 .loadingContainer {
-    position: absolute;
-    top: 75vh;
-    background-color: transparent;
+    position: relative;
+    height: auto;
+    width: auto;
+    margin: 0px auto;
     font-style: italic;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    text-shadow: 0px 5px 3px #d90368;   
-    margin-left: 50px;
+    text-shadow: 3px 5px 3px #d90368;
+    vertical-align: middle;
 }
 
 
 .L-letter {
-    color:red;
+    display: flex;
+    color:#820263;
     font-weight: bold;
     font-size: 8rem;
+    animation-name: letterA;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    
 }
 .O-letter {
+    display: flex;
     color:red;
     font-weight: bold;
     font-size: 8rem;
+    animation-name: letterB;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
 }
 .A-letter {
+    display: flex;
     color:red;
     font-weight: bold;
     font-size: 8rem;
+    animation-name: letterA;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
 }
 .D-letter {
+    display: flex;
     color:red;
     font-weight: bold;
     font-size: 8rem; 
+    animation-name: letterB;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
 }
 .I-letter {
+    display: flex;
     color:red;
     font-weight: bold;
     font-size: 8rem; 
+    animation-name: letterA;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
 }
 .N-letter {
+    display: flex;
     color:red;
     font-weight: bold;
     font-size: 8rem;
+    animation-name: letterB;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
 }
 .G-letter {
+    display: flex;
     color:red;
     font-weight: bold;
     font-size: 8rem;
+    animation-name: letterA;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
 }
 .first-point {
     color:red;
@@ -110,4 +147,22 @@
         text-shadow: 1px 1px 1px #FFD400;
     }
 
+}
+
+@keyframes letterA {
+    from{
+        color: #2E294E;
+    }
+    to{
+        color: #d90368
+    }
+}
+
+@keyframes letterB {
+    from{
+        color: #d90368;
+    }
+    to{
+        color: #2E294E
+    }
 }
